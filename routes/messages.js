@@ -7,6 +7,7 @@ var _ = require('lodash')
 exports.postMessage = postMessage
 exports.viewPosts = viewPosts
 exports.deletePosts = deletePosts
+exports.deleteAllPosts = deleteAllPosts
 
 var logging = require('./logger')
 var constants = require('./constants')
@@ -99,3 +100,11 @@ function deletePosts(req, res) {
 
 }
 
+function deleteAllPosts(req, res) {
+    allPosts = {}
+
+    var response = {
+        responseMessage : 'ACTION_COMPLETE'
+    }
+    res.send(response)
+}

@@ -25,6 +25,7 @@ app.get('/ping', function(req, res) {
 app.post('/post', messages.postMessage)
 app.get('/view_posts', messages.viewPosts)
 app.post('/delete_post', messages.deletePosts)
+app.post('/delete_all_posts', messages.deleteAllPosts)
 
 var httpServer = http.createServer(app).listen(app.get('port'), function() {
     console.log('Express server listeneing on port ', app.get('port'));
